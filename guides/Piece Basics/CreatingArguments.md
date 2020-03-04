@@ -28,7 +28,7 @@ module.exports = class extends Argument {
 
 	run(arg, possible, message) {
 		const results = REGEX_EMOJI.exec(arg);
-		const emoji = results ? this.client.emojis.get(results[1]) : null;
+		const emoji = results ? this.client.emojis.cache.get(results[1]) : null;
 		if (emoji) return emoji;
 		throw message.language.get('RESOLVER_INVALID_EMOJI', possible.name);
 	}

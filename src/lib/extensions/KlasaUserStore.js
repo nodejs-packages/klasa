@@ -1,14 +1,14 @@
-const { UserStore } = require('discord.js');
+const { UserMananger } = require('discord.js');
 
 /**
- * Contains extensions to the base UserStore class
- * @extends external:UserStore
+ * Contains extensions to the base UserManager class
+ * @extends external:UserManager
  */
-class KlasaUserStore extends UserStore {
+class KlasaUserStore extends UserMananger {
 
 	/**
 	 * Fetches a user and syncs their settings
-	 * @param  {...any} args d.js UserStore#fetch arguments
+	 * @param  {...any} args d.js UserManager#fetch arguments
 	 */
 	async fetch(...args) {
 		const user = await super.fetch(...args);

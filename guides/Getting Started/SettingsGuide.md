@@ -213,7 +213,7 @@ const { Client } = require('klasa');
 Client.defaultGuildSchema.add('roles', 'role', { array: true });
 
 // Array of Role Objects
-const roles = message.guild.settings.get('roles').map(role => message.guild.roles.get(role));
+const roles = message.guild.settings.get('roles').map(role => message.guild.roles.cache.get(role));
 ```
 
 > Note: Any key that cannot be resolved to its full object will be set to null to ensure falsy checks work as intended.

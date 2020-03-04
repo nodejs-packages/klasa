@@ -55,7 +55,7 @@ const { Task } = require('klasa');
 module.exports = class extends Task {
 
 	async run({ channel, user, text }) {
-		const _channel = this.client.channels.get(channel);
+		const _channel = this.client.channels.cache.get(channel);
 		return _channel.send(`<@${user}> You wanted me to remind you: ${text}`);
 	}
 

@@ -40,7 +40,7 @@ declare module 'klasa' {
 		TextChannel,
 		User,
 		UserResolvable,
-		UserStore,
+		UserManager,
 		VoiceChannel,
 		VoiceState,
 		WebhookClient
@@ -615,7 +615,7 @@ declare module 'klasa' {
 
 	export class SerializerStore extends AliasStore<string, Serializer, typeof Serializer> { }
 
-	export class KlasaUserStore extends UserStore { }
+	export class KlasaUserStore extends UserManager { }
 
 //#endregion Stores
 
