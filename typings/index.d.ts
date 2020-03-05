@@ -615,7 +615,7 @@ declare module 'klasa' {
 
 	export class SerializerStore extends AliasStore<string, Serializer, typeof Serializer> { }
 
-	export class KlasaUserStore extends UserManager { }
+	export class KlasaUserManager extends UserManager { }
 
 //#endregion Stores
 
@@ -1637,7 +1637,7 @@ declare module 'discord.js' {
 		KlasaGuild,
 		KlasaMessage,
 		KlasaUser,
-		KlasaUserStore,
+		KlasaUserManager,
 		Language,
 		LanguageStore,
 		Monitor,
@@ -1664,7 +1664,7 @@ declare module 'discord.js' {
 		options: Required<KlasaClientOptions>;
 		userBaseDirectory: string;
 		console: KlasaConsole;
-		users: KlasaUserStore;
+		users: KlasaUserManager;
 		arguments: ArgumentStore;
 		commands: CommandStore;
 		inhibitors: InhibitorStore;

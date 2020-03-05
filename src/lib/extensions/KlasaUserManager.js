@@ -4,7 +4,7 @@ const { UserMananger } = require('discord.js');
  * Contains extensions to the base UserManager class
  * @extends external:UserManager
  */
-class KlasaUserStore extends UserMananger {
+class KlasaUserManager extends UserMananger {
 
 	/**
 	 * Fetches a user and syncs their settings
@@ -18,4 +18,4 @@ class KlasaUserStore extends UserMananger {
 
 }
 
-module.exports = KlasaUserStore;
+module.exports = KlasaUserManager;
