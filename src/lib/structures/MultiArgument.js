@@ -34,7 +34,7 @@ class MultiArgument extends Argument {
 		let i = 0;
 
 		for (const arg of rest) {
-			if (max && i > max) break;
+			if (max && i >= max) break;
 			try {
 				const structure = await base.run(arg, possible, message);
 				structures.push(structure);
@@ -45,7 +45,7 @@ class MultiArgument extends Argument {
 		}
 
 		args.push(rest.splice(0, structures.length).join(usageDelim), ...rest);
-		if ((min && structures.length < min) || !structures.length) throw message.language.get(`RESOLVER_MULTI_TOO_FEW`, base.name, min);
+		if ((min && structures.length < min) || !structures.length) throw message.language.get('RESOLVER_MULTI_TOO_FEW', base.name, min);
 		return structures;
 	}
 
